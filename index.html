@@ -1,0 +1,181 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="app.css">
+  <title>Saloon 3 — Café Casablanca</title>
+</head>
+<body>
+  <nav id="navbar">
+  <div class="nav-logo">Saloon <span>3</span></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#photos">Gallery</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#location">Location</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section id="home">
+  <div class="hero-bg-circle"></div>
+  <div class="hero-content reveal">
+    <div class="hero-eyebrow">Est. 2019 — Marrakech</div>
+    <h1 class="hero-title">Where Coffee<br>Meets <em>Soul</em></h1>
+    <p class="hero-desc">A corner of warmth in the heart of the city. At Saloon 3, every cup is brewed with intention and every visit feels like coming home.</p>
+    <div class="hero-btns">
+      <a href="#menu" class="btn-primary">Explore Menu</a>
+      <a href="#contact" class="btn-outline">Reserve a Table</a>
+    </div>
+  </div>
+  <div class="hero-image-wrap reveal">
+    <div class="hero-img-frame">
+      <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=700&q=80" alt="Café interior"/>
+      <div class="hero-badge"><span class="num">★</span><span class="txt">Top Café</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="menu-header reveal">
+    <p class="section-label">Our Offerings</p>
+    <h2 class="section-title" style="color:var(--cream)">Crafted with Care</h2>
+    <p class="section-sub" style="color:rgba(245,239,228,.55)">From single-origin espresso to house-baked pastries — everything made fresh, every day.</p>
+  </div>
+  <div class="menu-tabs reveal">
+    <button class="tab-btn active" onclick="switchTab('cafe',this)">Cofe Noir</button>
+    <button class="tab-btn" onclick="switchTab('chaudes',this)">Boissons Chaudes</button>
+    <button class="tab-btn" onclick="switchTab('the',this)">The</button>
+    <button class="tab-btn" onclick="switchTab('boisson-gazeuse',this)">Boisson Gazeuse</button>
+    <button class="tab-btn" onclick="switchTab('jus',this)">Jus</button>
+    <button class="tab-btn" onclick="switchTab('cocktails',this)">Cocktails</button>
+    <button class="tab-btn" onclick="switchTab('mojitos',this)">Mojitos</button>
+    <button class="tab-btn" onclick="switchTab('detox',this)">Detox</button>
+    <button class="tab-btn" onclick="switchTab('frappe',this)">Cafe Frappe</button>
+    <button class="tab-btn" onclick="switchTab('ptit-dejeuner',this)">Nos Ptit Dejeuner</button>
+    <button class="tab-btn" onclick="switchTab('crepes',this)">Crepes</button>
+    <button class="tab-btn" onclick="switchTab('sandwiches',this)">Sandwiches</button>
+  </div>
+  <div class="tab-panel active" id="tab-cafe">
+    <div class="menu-grid">
+      <div class="menu-item"><span class="item-category">Espresso</span><div class="item-name">Espresso Solo</div><div class="item-desc">A precise 25ml shot of our signature blend — bold, syrupy, and complex.</div><div class="item-footer"><span class="item-price">18 MAD</span><span class="item-tag">Classic</span></div></div>
+      <div class="menu-item"><span class="item-category">Espresso</span><div class="item-name">Cortado</div><div class="item-desc">Equal parts espresso and steamed milk. Balance in a small glass.</div><div class="item-footer"><span class="item-price">22 MAD</span></div></div>
+      <div class="menu-item"><span class="item-category">Milk Based</span><div class="item-name">Flat White</div><div class="item-desc">Velvety microfoam poured over a double ristretto. The Australian classic.</div><div class="item-footer"><span class="item-price">28 MAD</span><span class="item-tag">Popular</span></div></div>
+      <div class="menu-item"><span class="item-category">Milk Based</span><div class="item-name">Café au Lait</div><div class="item-desc">Smooth drip coffee with warm steamed milk in a classic bowl-style cup.</div><div class="item-footer"><span class="item-price">25 MAD</span></div></div>
+      <div class="menu-item"><span class="item-category">Specialty</span><div class="item-name">Saloon Signature</div><div class="item-desc">Espresso, cardamom-infused milk, a pinch of rose water and honey drizzle.</div><div class="item-footer"><span class="item-price">38 MAD</span><span class="item-tag">Signature</span></div></div>
+      <div class="menu-item"><span class="item-category">Filter</span><div class="item-name">Pour-Over</div><div class="item-desc">Single-origin beans brewed to order. Ask your barista about today's origin.</div><div class="item-footer"><span class="item-price">32 MAD</span></div></div>
+      <div class="menu-item"><span class="item-category">Filter</span><div class="item-name">Pour-Over</div><div class="item-desc">Single-origin beans brewed to order. Ask your barista about today's origin.</div><div class="item-footer"><span class="item-price">32 MAD</span></div></div>
+    </div>
+  </div>
+  <div class="tab-panel" id="tab-chaudes">
+    <div class="menu-grid">
+      <div class="menu-item"><span class="item-category">Cold Brew</span><div class="item-name">Cold Brew Classic</div><div class="item-desc">18-hour steeped cold brew. Smooth, low-acid, dangerously drinkable.</div><div class="item-footer"><span class="item-price">32 MAD</span><span class="item-tag">Popular</span></div></div>
+      <div class="menu-item"><span class="item-category">Iced</span><div class="item-name">Iced Latte</div><div class="item-desc">Double espresso over ice with your choice of whole, oat, or almond milk.</div><div class="item-footer"><span class="item-price">30 MAD</span></div></div>
+      <div class="menu-item"><span class="item-category">Smoothie</span><div class="item-name">Mango Sunrise</div><div class="item-desc">Fresh mango, banana, orange juice, and a hint of ginger. All natural.</div><div class="item-footer"><span class="item-price">35 MAD</span></div></div>
+      <div class="menu-item"><span class="item-category">Lemonade</span><div class="item-name">Mint Lemonade</div><div class="item-desc">House-pressed lemon, fresh mint, and sparkling water. Moroccan classic.</div><div class="item-footer"><span class="item-price">22 MAD</span><span class="item-tag">Local Fav</span></div></div>
+    </div>
+  </div>
+  <div class="tab-panel" id="tab-food">
+    <div class="menu-grid">
+      <div class="menu-item"><span class="item-category">Breakfast</span><div class="item-name">Avocado Toast</div><div class="item-desc">Sourdough, smashed avocado, poached egg, chili flakes, and sea salt.</div><div class="item-footer"><span class="item-price">55 MAD</span><span class="item-tag">Chef's Pick</span></div></div>
+      <div class="menu-item"><span class="item-category">Breakfast</span><div class="item-name">Msemen &amp; Argan</div><div class="item-desc">Traditional Moroccan flatbread with pure argan oil and raw honey.</div><div class="item-footer"><span class="item-price">38 MAD</span><span class="item-tag">Local</span></div></div>
+      <div class="menu-item"><span class="item-category">Lunch</span><div class="item-name">Club Sandwich</div><div class="item-desc">Grilled chicken, fresh vegetables, aioli, and toasted brioche.</div><div class="item-footer"><span class="item-price">65 MAD</span></div></div>
+      <div class="menu-item"><span class="item-category">Lunch</span><div class="item-name">Salade Nicoise</div><div class="item-desc">Tuna, olives, eggs, green beans, and a light mustard vinaigrette.</div><div class="item-footer"><span class="item-price">58 MAD</span></div></div>
+    </div>
+  </div>
+  <div class="tab-panel" id="tab-pastry">
+    <div class="menu-grid">
+      <div class="menu-item"><span class="item-category">Baked</span><div class="item-name">Butter Croissant</div><div class="item-desc">Laminated in-house with French butter. Flaky, layered, and golden.</div><div class="item-footer"><span class="item-price">20 MAD</span><span class="item-tag">Daily Fresh</span></div></div>
+      <div class="menu-item"><span class="item-category">Cake</span><div class="item-name">Slice of the Day</div><div class="item-desc">Rotating seasonal cake - ask your server for today's flavor.</div><div class="item-footer"><span class="item-price">28 MAD</span></div></div>
+      <div class="menu-item"><span class="item-category">Moroccan</span><div class="item-name">Kaab el Ghazal</div><div class="item-desc">Almond-filled crescent pastry dusted with powdered sugar. A Casablanca staple.</div><div class="item-footer"><span class="item-price">15 MAD</span><span class="item-tag">Local Fav</span></div></div>
+      <div class="menu-item"><span class="item-category">Vegan</span><div class="item-name">Date &amp; Walnut Bar</div><div class="item-desc">No-bake energy bar with Medjool dates, walnuts, oats, and cinnamon.</div><div class="item-footer"><span class="item-price">22 MAD</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="photos">
+  <div class="photo-intro">
+    <div class="reveal"><p class="section-label">Our Space</p><h2 class="section-title">A Place to Slow Down</h2></div>
+    <p class="section-sub reveal" style="max-width:300px">Warm interiors, natural light, and the smell of fresh coffee. Every corner tells a story.</p>
+  </div>
+  <div class="gallery-grid reveal">
+    <div class="gp"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80" alt="Cafe interior"/><div class="gp-overlay"><span class="gp-label">Interior</span></div></div>
+    <div class="gp"><img src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?w=600&q=80" alt="Latte art"/><div class="gp-overlay"><span class="gp-label">Latte Art</span></div></div>
+    <div class="gp"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80" alt="Coffee beans"/><div class="gp-overlay"><span class="gp-label">Our Beans</span></div></div>
+    <div class="gp"><img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&q=80" alt="Pastries"/><div class="gp-overlay"><span class="gp-label">Pastries</span></div></div>
+    <div class="gp"><img src="https://images.unsplash.com/photo-1507914372368-b2b085b925a1?w=600&q=80" alt="Barista"/><div class="gp-overlay"><span class="gp-label">Our Team</span></div></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-img-stack reveal">
+    <div class="about-img-1"><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=700&q=80" alt="Cafe atmosphere"/></div>
+    <div class="about-img-2"><img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=500&q=80" alt="Coffee cup"/></div>
+  </div>
+  <div class="reveal">
+    <p class="section-label">Our Story</p>
+    <h2 class="section-title">More Than a Cup of Coffee</h2>
+    <p class="section-sub">Saloon 3 was born from a simple belief: that a cafe should feel like a third place, not home, not work, but somewhere in between. Since 2019, we have been that place for Casablanca.</p>
+    <p class="section-sub" style="margin-top:1rem">We source our beans from Ethiopia, Colombia, and Brazil, roasted weekly by our partner roastery. Our kitchen bakes fresh every morning, no shortcuts, no compromises.</p>
+    <div class="about-stats">
+      <div class="stat-box"><div class="stat-num">6+</div><div class="stat-lbl">Years Open</div></div>
+      <div class="stat-box"><div class="stat-num">40+</div><div class="stat-lbl">Menu Items</div></div>
+      <div class="stat-box"><div class="stat-num">3</div><div class="stat-lbl">Bean Origins</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="location">
+  <h2 class="section-title">Our Location</h2>
+  <p class="section-sub">Come visit us at our café!</p>
+  <div class="map-wrap" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d849.3028598692731!2d-8.06001820321569!3d31.628060697006553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafe98c8448b979%3A0x6bf02f474ce21b7f!2sSaloon%203%20Marrakech!5e0!3m2!1sfr!2sma!4v1774535748767!5m2!1sfr!2sma" width="1500" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="reveal">
+    <p class="section-label">Get in Touch</p>
+    <h2 class="section-title" style="color:var(--cream)">Find Us or Write to Us</h2>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <div class="contact-block"><h4>Address</h4><p>3 Rue des Fleurs, Maarif<br>Casablanca 20100, Morocco</p></div>
+      <div class="contact-block"><h4>Hours</h4><p>Monday to Friday: 7:30 am to 9:00 pm<br>Saturday to Sunday: 8:00 am to 10:00 pm</p></div>
+      <div class="contact-block"><h4>Phone and Email</h4><p>+212 5 22 00 00 00<br>hello@saloon3.ma</p></div>
+      <div class="contact-block"><h4>Follow Us</h4><p>@saloon3.casa on Instagram and Facebook</p></div>
+    </div>
+    <div class="reveal">
+      <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
+        <div class="form-row">
+          <div class="form-group"><label>Name</label><input type="text" placeholder="Your name" required/></div>
+          <div class="form-group"><label>Phone</label><input type="tel" placeholder="+212 6 00 00 00 00"/></div>
+        </div>
+        <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com" required/></div>
+        <div class="form-group"><label>Subject</label>
+          <select><option>Reservation</option><option>Private Event</option><option>Catering Inquiry</option><option>General Question</option></select>
+        </div>
+        <div class="form-group"><label>Message</label><textarea placeholder="Tell us how we can help..."></textarea></div>
+        <button type="submit" class="btn-send">Send Message</button>
+      </form>
+      <div class="form-success" id="formSuccess">Thank you! We will be in touch soon.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Saloon 3</div>
+  <div class="footer-links">
+    <a href="#home">Home</a><a href="#menu">Menu</a><a href="#photos">Gallery</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </div>
+  <div>2025 Saloon 3 Marrakech</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
